@@ -1,0 +1,5 @@
+/__pycache__
+/data/embeddings.pkl
+/data/text_data.csv
+/.fun_save
+/.DS_Store
