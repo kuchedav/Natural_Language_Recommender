@@ -3,3 +3,4 @@
 /data/text_data.csv
 /.fun_save
 /.DS_Store
+/data/bert_embeddings.csv
