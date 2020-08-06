@@ -9,8 +9,8 @@ NLR is a Natural language Recommender which takes pdf-files as input for trainin
 
 # Goal
 
-  - Train an automated recommender system on the text data.
-  - Algorithm then returns on a new pdf-file labels fit best to it based on the learned patterns.
+  - Train an automated recommender system on text data.
+  - Algorithm returns recommendation for labels on a new pdf-file based on learned patterns.
   - Solution has to be easy to use
 
 # Usage
@@ -29,6 +29,9 @@ When executing the command you will see this output in your console.
 ![Command Line](.pictures/command_line.png)
 ### GUI
 There is a tkinter GUI which enables users to interact with the application in a user friendly way.
+
+The GUI can be opened by calling the file `./Tkinter.py`
+
 ![Tkinter GUI](.pictures/gui.png)
 
 
@@ -42,12 +45,14 @@ There is a tkinter GUI which enables users to interact with the application in a
 ![Architecture of algorithm](.pictures/algorithm.png)
 
 ## Embeddings
-I have implemented two Embeddings
+I have implemented two default Embeddings
   * tf-idf (fast)
   * BERT (advanced)
 
+In the code is as well the function for Word2Vec but it is not used in the application.
+
 ## Binary Classification
-For classification we compare many different methods.
+For classification we compare many different classifiers.
 
 Simple classifiers
 * Nearest Neighbors
@@ -66,9 +71,12 @@ Ensemble classifiers
 Since one document can have multiple Topics we create a prediction for every document-topic combination.
 ![Architecture of algorithm](.pictures/algorithm3.png)
 
+The output data will have following shape. Each row will be calculated by a different classifier and each data point is a different execution with different input.
+![Architecture of algorithm](.pictures/algorithm4.png)
+
 The the best classifier is selected by comparing the weighted f-1 score across the prediction scores of each topic.
 
-This classifier is further used to classify the input pdf.
+This final classifier is further used to classify the input pdf.
 
 ## Score
 The overall score of the application is calculated following this logic:
