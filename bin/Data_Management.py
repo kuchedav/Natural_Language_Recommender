@@ -161,7 +161,10 @@ def get_scores(classifier_df, embeddings_chosen, top_n = 5, cut_under_n = 0, plo
 
         correct_pred_topics = [i for i in true_topics if i in top_5_topics]
 
-        score = np.round(len(correct_pred_topics) / len(true_topics),2)
+        if top_n == 1:
+          score = len(set(correct_pred_topics))
+        else:
+          score = np.round(len(set(correct_pred_topics)) / len(set(true_topics)),2)
         scores.append(score)
     
     if plot_boolean:

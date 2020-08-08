@@ -127,11 +127,11 @@ if __name__=="__main__":
     # if run in IDE this weill replace the arg input
     if not nlr_path and not pdf_path:
         # attributes
-        pdf_path = "/Users/davidkuchelmeister/Google Drive/Projektarbeit 2/Data/Documents/Coelho et al._2016.pdf"
         pdf_path = "/Users/davidkuchelmeister/Google Drive/Projektarbeit 2/Data/Documents/Albaladejo et al._2010.pdf"
+        pdf_path = "/Users/davidkuchelmeister/Google Drive/Projektarbeit 2/Data/Documents/Coelho et al._2016.pdf"
 
         nlr_path = "/Users/davidkuchelmeister/Google Drive/Projektarbeit 2/NLR"
-        advanced = False
+        advanced = True
         save_past_runs = False
         install_packages = False
 
@@ -171,4 +171,4 @@ if __name__=="__main__":
     print(predict_df.sort_values("Probability",ascending=False).reset_index(drop=True))
 
     ### get scores
-    scores = mgt.get_scores(classifier_df, embeddings_chosen, top_n = 5, cut_under_n = 0, plot_boolean=True)
+    scores = mgt.get_scores(classifier_df, embeddings_chosen, top_n = 3, cut_under_n = 0, plot_boolean=True)

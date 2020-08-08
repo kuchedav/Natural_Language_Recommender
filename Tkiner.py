@@ -70,7 +70,7 @@ b1.place(x=x_spacing+200, y=y_spacing*level)
 level += 1
 
 # at title
-lbl2 = Label(window, text="Wähle den Pfad zu den nlr Dateien", font=("Arial", 14), fg="grey")
+lbl2 = Label(window, text="Wähle den Pfad zu den NLR Dateien", font=("Arial", 14), fg="grey")
 lbl2.place(x=0, y=y_spacing*level)
 
 ent2=Entry(window,font=40)
