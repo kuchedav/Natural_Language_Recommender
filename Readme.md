@@ -1,6 +1,6 @@
-# Natural Language Recommender
+# Medirec "Natural Language Recommender"
 
-NLR is a Natural language Recommender which takes pdf-files as input for training and prediction and outputs the top 5 most probable labels for the target pdf-file.
+Medirec is a Natural language Recommender which takes pdf-files as input for training and prediction and outputs the top 5 most probable labels for the target pdf-file.
 
 # Problem
 
