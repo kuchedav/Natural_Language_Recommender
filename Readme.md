@@ -1,4 +1,4 @@
-# Medirec "Natural Language Recommender"
+# Medirec "Medical paper recommender system"
 
 Medirec is a Natural language Recommender which takes pdf-files as input for training and prediction and outputs the top 5 most probable labels for the target pdf-file.
 
